@@ -1,0 +1,128 @@
+.container-sidebar {
+  width: 280px;
+  min-height: 100vh;
+  padding: 16px 12px;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+
+  background: #fffaf7;
+  border-right: 1px solid #e8d5c4;
+}
+
+.container-sidebar > div {
+  height: auto;
+  padding: 14px;
+  border-radius: 16px;
+  border: 1px solid #e8d5c4;
+  background: #fff4ec;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 6px;
+}
+
+.container-sidebar > div h2 {
+  width: 100%;
+  color: #431407;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.container-sidebar > div p {
+  width: 100%;
+  color: #92400e;
+  font-size: 12px;
+  margin: 0;
+}
+
+.container-sidebar nav {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.container-sidebar nav a {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  color: #78350f;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.container-sidebar nav a:hover {
+  background: #fde8d4;
+  color: #431407;
+}
+
+.container-sidebar button {
+  width: 100%;
+  margin-top: auto;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #c2410c;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  border: 0;
+  cursor: pointer;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.container-sidebar button:hover {
+  background: #9a3412;
+}
+
+.container-sidebar button:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 768px) {
+  .container-sidebar {
+    width: 100%;
+    min-height: auto;
+    padding: 10px;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    border-right: 0;
+    border-bottom: 1px solid #e8d5c4;
+    background: #fffaf7;
+  }
+
+  .container-sidebar > div {
+    display: none;
+  }
+
+  .container-sidebar nav {
+    flex-direction: row;
+    gap: 8px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .container-sidebar nav a {
+    white-space: nowrap;
+    padding: 8px 10px;
+    font-size: 13px;
+    border-radius: 10px;
+  }
+
+  .container-sidebar button {
+    width: auto;
+    padding: 8px 10px;
+    margin: 0 0 0 auto;
+  }
+}
