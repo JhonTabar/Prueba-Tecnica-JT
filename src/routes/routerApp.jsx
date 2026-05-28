@@ -15,6 +15,10 @@ export let routerApp = [
     element: <Dashboard />,
     children: [
       {
+        index: true,
+        element: <Incidencia />,
+      },
+      {
         path: "incidents/",
         element: <Incidencia />,
       },

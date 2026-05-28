@@ -60,11 +60,11 @@ function Incidencia() {
             </thead>
             <tbody className="divide-y divide-slate-200">
               {incidencias.map((item) => (
-                <tr key={item.id} className="hover:bg-slate-50 transition-colors">
+                <tr key={item.id_incidencia} className="hover:bg-slate-50 transition-colors">
                   <td className="px-4 py-3">
                     <div className="min-w-0">
                       <p className="text-sm font-semibold text-slate-900 truncate">{item.nombre}</p>
-                      <p className="mt-0.5 text-xs text-slate-500 truncate">ID: {item.id}</p>
+                      <p className="mt-0.5 text-xs text-slate-500 truncate">ID: {item.id_incidencia}</p>
                     </div>
                   </td>
                   <td className="px-4 py-3">
@@ -86,13 +86,13 @@ function Incidencia() {
                   <td className="px-4 py-3">
                     <div className="flex items-center justify-end gap-2">
                       <Link
-                        to={"/dashboard/edit-incident/" + item.id}
+                        to={'/dashboard/edit-incident/' + item.id_incidencia}
                         className="rounded-lg px-3 py-2 text-xs font-semibold border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 transition-colors"
                       >
                         Editar
                       </Link>
                       <button
-                        onClick={() => deleteIncidencia(item.id)}
+                        onClick={() => deleteIncidencia(item.id_incidencia)}
                         type="button"
                         className="rounded-lg px-3 py-2 text-xs font-semibold border border-rose-200 bg-rose-50 text-rose-700 hover:bg-rose-100 transition-colors"
                       >
