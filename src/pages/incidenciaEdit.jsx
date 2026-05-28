@@ -3,6 +3,7 @@ import { end_points } from "../services/api";
 import { redirect } from "../helpers/alerts";
 import { useParams, Link } from "react-router-dom";
 
+
 function IncidenciaEdit() {
   const [nombre, setNombre] = useState("");
   const [titulo, setTitulo] = useState("");
