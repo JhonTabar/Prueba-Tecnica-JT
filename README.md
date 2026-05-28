@@ -27,10 +27,10 @@ npm install
 npm run dev
 ```
 
-5. Abre el navegador en la dirección que indique Vite, por ejemplo:
+5. Abre el navegador en la dirección:
 
 ```text
-http://localhost:5176/
+https://prueba-tecnica-jt.vercel.app/
 ```
 
 ## Uso
