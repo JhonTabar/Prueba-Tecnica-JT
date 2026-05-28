@@ -2,16 +2,16 @@ import { getLocalStorage, removeLocalStorage } from "../helpers/local-storage";
 import { initials } from "../helpers/generators";
 import { redirect } from "../helpers/alerts";
 import { Link } from "react-router-dom";
-import "../pages/Dashboard.css";
+import "./Sidebar.css";
 
 let auth = getLocalStorage("user");
 
 const Sidebar = () => {
+    const auth = getLocalStorage("user");
+  if (!auth) return null;
   function logout() {
     removeLocalStorage("user");
     redirect("Cerrando sesión...", "/", "info");
-  const auth = getLocalStorage("user");
-  if (!auth) return null;
   }
 
   return (
@@ -22,8 +22,9 @@ const Sidebar = () => {
         <p>Admin ID: {auth.id_admin}</p>
       </div>
       <nav>
-        <Link to="/dashboard/incidents/">Incidencias</Link>
-        <Link to="/dashboard/create-incident/">Nueva incidencia</Link>
+        <Link to="/dashboard">Dashboard</Link>
+        <Link to="incidents/">Incidencias</Link>
+        <Link to="create-incident/">Nueva incidencia</Link>
       </nav>
       <button onClick={logout}>Cerrar sesión</button>
     </aside>
